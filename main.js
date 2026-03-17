@@ -5,6 +5,8 @@ const title = document.getElementById('cauhoi');
 
 // --- PHẦN 1: Làm nút chạy trốn ---
 nutChay.addEventListener('mouseover', function() {
+    
+    nutChay.style.transition = 'all 0.2s ease'; 
 
     nutChay.style.position = 'fixed';
     
@@ -12,7 +14,6 @@ nutChay.addEventListener('mouseover', function() {
     const maxY = window.innerHeight - nutChay.offsetHeight;
     
     // Thêm transition bằng JS để đảm bảo nó luôn mượt
-    nutChay.style.transition = 'all 0.2s ease'; 
     nutChay.style.left = Math.floor(Math.random() * maxX) + 'px';
     nutChay.style.top = Math.floor(Math.random() * maxY) + 'px';
 });
